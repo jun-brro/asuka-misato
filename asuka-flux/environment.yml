@@ -8,9 +8,11 @@ dependencies:
   - python=3.11
   - numpy
   - pyyaml
-  - pytorch==2.4.1
-  - torchvision==0.19.1
+  # PyTorch ecosystem - use more compatible versions
+  - pytorch==2.3.1
+  - torchvision==0.18.1  
   - pytorch-cuda=11.8
+  # Core ML libraries
   - diffusers==0.30.2
   - datasets
   - huggingface_hub
@@ -18,3 +20,23 @@ dependencies:
   - transformers==4.45.2
   - omegaconf
   - einops
+  - accelerate
+  - safetensors
+  # Image processing
+  - pillow
+  - opencv
+  - scikit-image
+  # Scientific computing
+  - scipy
+  - scikit-learn
+  # Gradio and UI
+  - gradio
+  # Utilities
+  - termcolor
+  - pip
+  - pip:
+    # PyPI-only packages
+    - imwatermark
+    - lpips
+    - git+https://github.com/openai/CLIP.git
+    - cprint
